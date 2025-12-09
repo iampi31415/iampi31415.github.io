@@ -1,0 +1,56 @@
+div.center {
+  text-align: center;
+  margin: auto
+}
+
+div img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+div.w420 {
+  max-width: 420px;
+}
+
+div.w320 {
+  max-width: 320px;
+}
+
+div.w220 {
+  max-width: 220px;
+}
+
+ol li {
+  margin: 1rem 0;
+}
+
+
+main ol {
+  list-style: none;
+  counter-reset: num;
+}
+
+main ol>li {
+  counter-increment: num;
+}
+
+main ol>li>p {
+  display: inline-block;
+  margin: 0.8rem 0;
+}
+
+main ol>li::before {
+  content: counter(num) ". ";
+}
+
+html:is(.ayu) main ol>li::before {
+  color: inherit
+}
+
+html:is(.rust, .light) main ol>li::before {
+  color: #248eb8;
+}
+
+html:is(.coal, .navy) main ol>li::before {
+  color: #ffa500;
+}

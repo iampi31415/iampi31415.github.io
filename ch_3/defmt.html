@@ -36,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da6833dd.js";
+            window.path_to_searchindex_js = "../searchindex-46291694.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-555589cf.js"></script>
@@ -182,7 +182,8 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="defmt"><a class="header" href="#defmt"><code>defmt</code></a></h1>
-<p><a href="https://docs.rs/defmt/latest/defmt/"><code>defmt</code></a> is an efficient logging framework. Just like <code>log</code>, the <code>defmt</code> crate enables <code>defmt::info</code>, <code>defmt::warn</code> and other levels. The name <code>defmt</code> comes from <em>deferred formatting</em>:</p>
+<p><a href="https://docs.rs/defmt/latest/defmt/"><code>defmt</code></a> is an efficient logging framework. Just like <code>log</code>, the <code>defmt</code> crate enables <code>defmt::info</code>, <code>defmt::warn</code> and other levels. It also has a <code>defmt::println!</code> macro.</p>
+<p>The name <code>defmt</code> comes from <em>deferred formatting</em>:</p>
 <blockquote>
 <p>(…) instead of formatting <code>255u8</code> into <code>"255"</code> and sending the string, the single-byte binary data is sent to a second machine, the host, and the formatting happens there.</p>
 </blockquote>
@@ -240,9 +241,10 @@ esp-backtrace = { version = "0.18.0", features = [
 <p>Add <a href="https://crates.io/crates/defmt">defmt</a> to the dependencies.</p>
 </li>
 <li>
-<p>Use the <code>defmt::println!</code> and some <a href="https://docs.rs/defmt/latest/defmt/#macros"><code>defmt</code> macros</a> to print a few messages.</p>
+<p><strong>Logging level</strong>: Use the <code>defmt::println!</code> and some <a href="https://docs.rs/defmt/latest/defmt/#macros"><code>defmt</code> macros</a> to print a few messages.</p>
 <ul>
 <li>When building the app, set <a href="https://defmt.ferrous-systems.com/filtering.html?highlight=DEFMT_LOG#defmt_log"><code>DEFMT_LOG</code></a> level as done for <code>ESP_LOG</code> earlier.</li>
+<li>An alternative to changing <code>.cargo/config.toml</code> is using <code>DEFMT_LOG=&lt;value&gt; cargo run --release</code>; the same is valid for <code>ESP_LOG</code>.</li>
 </ul>
 </li>
 <li>

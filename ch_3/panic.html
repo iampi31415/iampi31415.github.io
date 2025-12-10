@@ -36,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da6833dd.js";
+            window.path_to_searchindex_js = "../searchindex-46291694.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-555589cf.js"></script>
@@ -185,7 +185,7 @@
 <p>If something goes wrong, our program will crash —another word for <code>panic!</code>. In embedded, we will always need to add a panic-handler.</p>
 <p>Let’s access the project at <code>exercises/panic</code>, and modify the code so thatit panics.</p>
 <p>We will also take a look at compilation <em>profiles</em>. We don’t need deep knowledge about profiles, just the very basics.</p>
-<p>Cargo compiles our code with certain settins in <code>Cargo.toml</code>, and if we do not specify those optional settings it uses defaults. Profiles customise how the code is compiled. We are interested in a few aspects:</p>
+<p><code>cargo</code> uses profile-settings to control compilation using defaults when unspecified. We are interested in controlling a few aspects:</p>
 <ul>
 <li>Should it be as fast as possible? As short as possible?</li>
 <li>Should it include information useful for debugging?</li>
@@ -195,25 +195,24 @@
 <li>In <code>main.rs</code> add a <code>panic!</code> somewhere, e.g. after our <code>println</code>.</li>
 <li>Run the code with <code>cargo run</code>; this uses the <em>development profile</em>.
 <ul>
-<li>This profile will output debug information into the compiled binary.</li>
+<li>It outputs debug information into the compiled binary.</li>
 </ul>
 </li>
 <li>Then run with <em>release profile</em> <code>cargo run --release</code>.
 <ul>
-<li>This profile will not include debug information. We should find:</li>
+<li>This profile will not output all debug information in the binary. We should find:</li>
 </ul>
-<pre><code class="language-console">!! A panic occured in 'examples/panic.rs', at line 15, column 5:
+<pre><code class="language-console">Hello world!
+====================== PANIC ======================
+panicked at examples/panic.rs:24:5:
 This is a panic
-
 Backtrace:
-
-0x42000100
-0x42000100 - _start_rust
+0x4200252a
+main
     at ??:??
 </code></pre>
-</li>
+The default <code>--release</code> behaviour <em>excludes</em> debug information and minimises the binary size; the backtrace shows the missing debug information with <code>??</code>.</li>
 </ol>
-<p><em>Why</em>? The default <code>--release</code> behaviour <em>excludes</em> debug information and minimises the binary size. The logs show the missing debug information with <code>??</code>.</p>
 <p>We nearly always use <code>--release</code> (we want small binary size). If we want debug information we need to configure the release profile in <code>.cargo/config.toml</code>:</p>
 <pre><code class="language-diff">+[profile.release]
 +debug = true
@@ -221,7 +220,7 @@ Backtrace:
 <p>Now it will emit debug information in the ELF binary file; <em>the info isn’t flashed</em> into the target, the info is just used to display the backtrace.
 4. Re-run the program with <code>--release</code> and confirm <code>??:??</code> is now filled in.</p>
 <p><code>exercises/panic/examples/panic.rs</code> contains a solution. It can be run with: <code>cargo run --example panic --release</code>.</p>
-<p>We have learnt how to configure a <em>profile</em> to get debug information printed out, and how to <code>panic!</code>. Let’s now do some blinking.</p>
+<p>We have learnt how to <code>panic!</code> and how to configure compilation so that panics print a backtrace with all debug information.</p>
 
                     </main>
 

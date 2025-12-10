@@ -36,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da6833dd.js";
+            window.path_to_searchindex_js = "../searchindex-46291694.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-555589cf.js"></script>
@@ -220,7 +220,7 @@ loop..!
 <pre><code class="language-toml">[target.riscv32imac-unknown-none-elf] # our processor arch.
 runner = "espflash flash --monitor"   # for `cargo run`.
 </code></pre>
-<p>Our <code>cargo run</code> is replaced by <code>cargo espflash flash --monitor</code> itself replaced by <code>cargo build &amp;&amp; espflash &lt;elf_path&gt; --monitor</code> (or something close to this.)</p>
+<p>Our <code>cargo run</code> is replaced by <code>cargo build &amp;&amp; espflash flash &lt;elf_path&gt; --monitor</code>.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
 <p>This builds and flashes the binary. Then monitors for any logs.

@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-84c4dc77.js";
+            window.path_to_searchindex_js = "searchindex-3e1d7eb8.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-cd8f4671.js"></script>
@@ -311,15 +311,15 @@ board.
 <ol>
 <li>Install Rust Toolchain following the steps in <a href="https://rustup.rs/">https://rustup.rs/</a>
 <ul>
-<li>The Rust Toolchain is a set of tools: <code>cargo</code>, <code>rustc</code>, <code>rustup</code> and the <em>compiled</em> <code>std</code>-component.</li>
+<li>The Rust Toolchain is <code>rustup</code> plus many components <code>cargo</code>, <code>rustc</code>, the <em>compiled</em> <code>std</code> component and so on.</li>
 </ul>
 </li>
 <li>We also want the compiled <code>std</code>-component for our target microcontroller
 <pre><code class="language-bash">rustup target add riscv32imac-unknown-none-elf
 </code></pre>
 </li>
-<li>Add other development components:
-<pre><code class="language-bash">rustup component add rustfmt clippy rust-analyzer rust-src 
+<li>Other development components:
+<pre><code class="language-bash">rustup component add rust-analyzer rust-src 
 </code></pre>
 <code>rust-src</code> is the <code>std</code>-component source code, useful for the <code>rust-analyzer</code>.</li>
 </ol>

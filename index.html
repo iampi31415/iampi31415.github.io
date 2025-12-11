@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Embedded Rust Basics.</title>
+        <title>About this tutorial - Embedded Rust Basics.</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-46291694.js";
+            window.path_to_searchindex_js = "searchindex-84c4dc77.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-555589cf.js"></script>
+        <script src="toc-cd8f4671.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -181,26 +181,28 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="intro"><a class="header" href="#intro">Intro</a></h1>
-<p>This book teaches the basics of embedded development in Rust. It uses an esp32-c6 board, which is cheap and widely available.</p>
-<p>Basic Rust knowledge and command-line familiarity are required, but no embedded experience is required. The content was written for Unix (Linux, MacOS) but PRs for supporting Windows are welcome.</p>
-<p>This book aims to be self-contained, but short <a href="#Suggested-reading">reading material</a> will be suggested. If the license allows for, we will copy useful content here, and provide the source.</p>
-<h2 id="required-hardware"><a class="header" href="#required-hardware">Required Hardware</a></h2>
-<blockquote class="blockquote-tag blockquote-tag-note">
-<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>Definitions: The “board” is the whole thing also known as DevKit. The MCU is the grey square at the top edge of the board, its name is ESP32-C6-WROOM or some variant.</p>
-</blockquote>
+                        <p>This is an embedded-rust tutorial using the esp32-c6 board.</p>
+<p>Rust knowledge is assumed, but no embedded experience is required. The content was written for Unix (Linux, MacOS).</p>
+<p>The book aims to be self-contained, but short <a href="#Suggested-reading">reading material</a> will be suggested. If the license allows for, we will copy useful content here, and provide the source.</p>
+<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
 <ul>
-<li>The esp32-c6 board is available on Mouser, Aliexpress and other retailers. It should look similar to:</li>
+<li>The “board” is the whole thing also known as DevKit.</li>
+<li>The microcontroller or microcontroller unit (MCU) is the ESP32-C6-WROOM (or some variant) and takes almost half the board. The MCU includes peripherals, CPU, RAM.</li>
+<li>The <em>peripherals</em> are part of the MCU: like GPIO, UART, I2C, SPI, WiFi, Bluetooth and other peripherals.</li>
 </ul>
-<div class="center w220">
-<a href="/assets/board.jpg">
-<img alt="Close up image of our board." src="/assets/board.jpg" />
-</a>
-<p>esp32-c6 board; the MCU is the grey rectangle at the top.</p>
+<h2 id="required-hardware"><a class="header" href="#required-hardware">Required Hardware</a></h2>
+<ul>
+<li>
+<p>The esp32-c6 board is available on Mouser, Aliexpress and other retailers. It should look similar to:</p>
+  
+<div class="w320">
+      <a href="/assets/board.jpg">
+          <img alt="Close up image of our board." src="/assets/board.jpg" />
+      </a>
+  </div>
 
-</div>
-
+</li>
+</ul>
 <p>Other required hardware:</p>
 <ul>
 <li>USB-C cable to link your computer and the board.
@@ -223,26 +225,30 @@ cd iampi31415.github.io
 </ul>
 <h2 id="suggested-reading"><a class="header" href="#suggested-reading">Suggested reading</a></h2>
 <ul>
-<li>Board <a href="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html">user guide</a>: you can find the labelled components, list of peripherals, and schematics.</li>
-<li>The Rust Embedded Guide (for another board) provides a handy [std_no-std][std vs no-std] comparison.</li>
+<li>esp32-c6 <a href="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html">user guide</a>: you can find the labelled components, list of peripherals, and schematics.</li>
 </ul>
 <h2 id="related-resources"><a class="header" href="#related-resources">Related resources</a></h2>
-<p>Not for suggested “immediate reading”, but just for reference.</p>
 <ul>
-<li><a href="https://github.com/esp-rs/esp-hal/tree/main/examples">Code examples</a> for setting up peripherals</li>
 <li><a href="https://github.com/esp-rs/awesome-esp-rust">Awesome ESP Rust</a></li>
-<li><a href="https://documentation.espressif.com/esp32-c6-wroom-1_wroom-1u_datasheet_en.pdf">MCU datasheet</a> i.e for the esp32-c6 micro controller.</li>
-<li><a href="https://documentation.espressif.com/esp32-c6_technical_reference_manual_en.pdf">reference manual</a> for esp32-c6 board: large, complete description of board.</li>
-<li>Join <a href="https://matrix.to/#/#esp-rs:matrix.org">esp-rs community</a> on Matrix!</li>
+<li><a href="https://matrix.to/#/#esp-rs:matrix.org">esp-rs community</a> on Matrix</li>
 </ul>
 <!--Links used in this document-->
+<!-- Too much info. May be OK for an appendix.
+* [Code examples] for setting up peripherals
+* [MCU datasheet] i.e for the esp32-c6 micro controller.
+* [reference manual] for esp32-c6 board: large, complete description of
+board.
+[MCU datasheet]: https://documentation.espressif.com/esp32-c6-wroom-1_wroom-1u_datasheet_en.pdf
+[reference manual]: https://documentation.espressif.com/esp32-c6_technical_reference_manual_en.pdf
+[Code examples]: https://github.com/esp-rs/esp-hal/tree/main/examples
+-->
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="ch_2/hardware.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="ch_1/no_std.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -253,7 +259,7 @@ cd iampi31415.github.io
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="ch_2/hardware.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="ch_1/no_std.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

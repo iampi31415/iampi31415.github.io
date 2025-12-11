@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Software - Embedded Rust Basics.</title>
+        <title>Hello World - Embedded Rust Basics.</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-46291694.js";
+            window.path_to_searchindex_js = "../searchindex-84c4dc77.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-555589cf.js"></script>
+        <script src="../toc-cd8f4671.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -147,7 +147,7 @@
                         <a href="https://github.com/iampi31415/iampi31415.github.io" title="Git repository" aria-label="Git repository">
                             <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
                         </a>
-                        <a href="https://github.com/iampi31415/iampi31415.github.io/edit/main/book/src/ch_2/software.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                        <a href="https://github.com/iampi31415/iampi31415.github.io/edit/main/book/src/ch_2/hello_world.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
                             <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
                         </a>
 
@@ -181,53 +181,73 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h2 id="toolchains"><a class="header" href="#toolchains">Toolchains</a></h2>
-<p><strong>Rust toolchain</strong></p>
+                        <h1 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h1>
+<p>There is a lot to learn, so let’s start simple.</p>
 <ol>
-<li>Install Rust following the steps in <a href="https://rustup.rs/">https://rustup.rs/</a></li>
-<li>Add the <code>std</code>-component source
-<pre><code class="language-bash">rustup component add rust-src # optionally: clippy, rustfmt, rust-analyzer
+<li>
+<p>Connect the board to your computer and access the first project:</p>
+<pre><code class="language-bash">cd exercises/hello_world
 </code></pre>
 </li>
-<li>Add the target architecture: the <code>std</code>-component compiled for our target.
-<pre><code class="language-bash">rustup target add riscv32imac-unknown-none-elf
+<li>
+<p>Build, flash, and monitor the project with <code>cargo run</code>. You should see:</p>
+<pre><code class="language-console">(..)
+0x4080082e - handle_interrupts
+at ??:??
+(..)
+Chip type:         esp32c6 (revision v0.0)
+(..)
+Commands:
+    CTRL+R    Reset chip
+    CTRL+C    Exit
+(..)
+loop..!
+loop..!
+loop..!
 </code></pre>
-<blockquote class="blockquote-tag blockquote-tag-note">
-<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>To cross-compile to our board’s processor architecture we need to add <code>riscv...</code> target.</p>
-</blockquote>
 </li>
 </ol>
-<p><strong>espressif tools</strong></p>
-<p><a href="https://github.com/esp-rs/espflash/tree/main/espflash"><code>espflash</code></a> is used for flashing our ELF binary (our program) into the board.</p>
-<p>Install both with: <code>cargo install espflash</code></p>
-<p><strong>build dependencies</strong>:</p>
+<p>We will talk about the <code>at ??:??</code> in the next chapter about <code>panic!</code>.</p>
+<p>The <code>loop..!</code> logs come from <a href="https://docs.rs/esp-println/latest/esp_println/">esp-println</a>. They provide us with <code>dbg!</code>, <code>print!</code> and <code>println!</code>.</p>
+<h2 id="build-flash-and-monitor"><a class="header" href="#build-flash-and-monitor"><em>Build, flash and monitor</em>?</a></h2>
+<p>The <code>.cargo/config.toml</code> includes this config:</p>
+<pre><code class="language-toml">[target.riscv32imac-unknown-none-elf] # our processor arch.
+runner = "espflash flash --monitor"   # for `cargo run`.
+</code></pre>
+<p>Our <code>cargo run</code> is replaced by <code>cargo build &amp;&amp; espflash flash &lt;elf_path&gt; --monitor</code>.</p>
+<blockquote class="blockquote-tag blockquote-tag-note">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
+<p>This builds and flashes the binary. Then monitors for any logs.
+Without the <code>--monitor</code> it flashes and exits instead of waiting and printing logs.</p>
+</blockquote>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><code>esp-println</code> supports backends <code>log</code> and <code>defmt</code> which provide <code>info!</code>, <code>warn!</code> other macros. Let’s try adding them:</p>
+<ol>
+<li>Uncomment the lines in <code>src/main.rs</code> and in <code>Cargo.toml</code> to enable <code>log</code>.</li>
+<li>The <code>log</code> crate logging level is controlled with <code>ESP_LOG</code> under the <code>[env]</code> section in <code>.cargo/config.toml</code>.
 <ul>
-<li>Debian/Ubuntu.
-<pre><code class="language-console">sudo apt install llvm-dev libclang-dev clang
-</code></pre>
-</li>
-<li>MacOS. When using the Homebrew package manager, which we recommend:
-<pre><code class="language-console">brew install llvm
-</code></pre>
-</li>
+<li>Change the <code>ESP_LOG</code> variable to turn <code>off</code> all logs. Re-run <code>cargo run --release</code>, to test how it works.</li>
+<li>Try with other levels, for example, with <code>trace</code>.</li>
 </ul>
-<h2 id="additional-software"><a class="header" href="#additional-software">Additional Software</a></h2>
+</li>
+</ol>
+<p>The <code>exercises/hello_world/examples/hello_world.rs</code> contains a solution.
+You can run it with the following command <code>cargo run --release --example hello_world</code>. You should first fix the lines at the bottom of <code>Cargo.toml</code>.</p>
+<h2 id="suggested-reading"><a class="header" href="#suggested-reading">Suggested Reading</a></h2>
 <ul>
-<li>Editor: Neovim, Zed, VSCode, Helix.</li>
-<li><a href="https://rust-analyzer.github.io/"><code>Rust Analyzer</code></a> LSP, for code completion, formatting.</li>
-<li><code>Even Better TOML</code> LSP, for editing TOML based configuration files</li>
+<li><a href="https://docs.rs/esp-println/latest/esp_println/">esp-println</a></li>
+<li><a href="https://docs.rs/log/latest/log/">log</a> this one you can just peek at to have a general idea.</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../ch_2/hardware.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../ch_1/software.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../ch_3/hello_world.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../ch_2/panic.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -237,11 +257,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../ch_2/hardware.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../ch_1/software.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../ch_3/hello_world.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../ch_2/panic.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

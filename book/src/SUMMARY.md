@@ -2,7 +2,7 @@
 
 # Summary
 
-## Introduction
+# Introduction
 
 - [About this tutorial](./ch_1/intro.md)
 - [Definitions](./ch_1/definitions.md)
@@ -11,7 +11,7 @@
 
 ------
 
-## Starting Simple
+# Starting Simple
 
 - [Hello World](./ch_2/hello_world.md)
 - [Panic](./ch_2/panic.md)

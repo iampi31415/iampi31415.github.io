@@ -36,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-2f22cf28.js";
+            window.path_to_searchindex_js = "../searchindex-44683c20.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-f2d9d81d.js"></script>
@@ -190,19 +190,16 @@
 </li>
 <li>
 <p>Build, flash, and monitor the project with <code>cargo run</code>. You should see:</p>
-<pre><code class="language-txt">(..)
+<pre><code class="language-txt">..
 0x4080082e - handle_interrupts
 at ??:??
-(..)
-Chip type:         esp32c6 (revision v0.0)
-(..)
+..
 Commands:
     CTRL+R    Reset chip
     CTRL+C    Exit
-(..)
+..
 loop..!
-loop..!
-loop..!
+..
 </code></pre>
 <p>We will talk about the <code>at ??:??</code> in the next chapter about <code>panic!</code>.</p>
 <p>The <code>loop..!</code> logs come from <a href="https://docs.rs/esp-println/latest/esp_println/">esp-println</a>. They provide us with <code>dbg!</code>, <code>print!</code> and <code>println!</code>.</p>

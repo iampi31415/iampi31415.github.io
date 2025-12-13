@@ -36,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-2f22cf28.js";
+            window.path_to_searchindex_js = "../searchindex-44683c20.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-f2d9d81d.js"></script>
@@ -185,26 +185,26 @@
 <h2 id="rust-tools"><a class="header" href="#rust-tools">Rust Tools</a></h2>
 <ol>
 <li>
-<p>Install Rust Toolchain following the steps in <a href="https://rustup.rs/">https://rustup.rs/</a></p>
+<p>Install the Rust toolchain following the steps in <a href="https://rustup.rs/">https://rustup.rs/</a></p>
 <ul>
 <li>The Rust Toolchain is <code>rustup</code> plus many components <code>cargo</code>, <code>rustc</code>, the <em>compiled</em> <code>std</code> component and so on.</li>
 </ul>
 </li>
 <li>
-<p>We also want the compiled <code>std</code>-component for our target microcontroller</p>
+<p>Add the compiled <code>std</code>-component for our target microcontroller</p>
 <pre><code class="language-bash">rustup target add riscv32imac-unknown-none-elf
 </code></pre>
 </li>
 <li>
-<p>Other development components:</p>
+<p>Add development components:</p>
 <pre><code class="language-bash">rustup component add rust-analyzer rust-src 
 </code></pre>
-<p><code>rust-src</code> is the <code>std</code>-component source code, useful for the <code>rust-analyzer</code>.</p>
+<p><code>rust-src</code> is the <code>std</code>-component’s source code, used by <code>rust-analyzer</code>.</p>
 </li>
 </ol>
 <h2 id="espressif-tools"><a class="header" href="#espressif-tools">Espressif tools</a></h2>
 <p><a href="https://github.com/esp-rs/espflash/tree/main/espflash"><code>espflash</code></a> is used for flashing our ELF binary (our program) into the board.</p>
-<p>Install it with: <code>cargo install espflash</code></p>
+<p>Install <code>espflash</code> with: <code>cargo install espflash</code></p>
 <h2 id="build-dependencies"><a class="header" href="#build-dependencies">Build dependencies</a></h2>
 <ul>
 <li>

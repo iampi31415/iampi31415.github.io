@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-51f0708b.js";
+            window.path_to_searchindex_js = "searchindex-2f22cf28.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-f2d9d81d.js"></script>
@@ -195,12 +195,11 @@
 <li>
 <p>USB-C cable to link your computer and the board.</p>
 <ul>
-<li>The cable <em>has to</em> support data transfers and not be power-only.
-y.</li>
+<li>The cable <em>has to</em> support data transfers and not be power-only.</li>
 </ul>
 </li>
 <li>
-<p>One resistor, 2 jumper wires, one LED, one breadboard. These are needed for “Blinky” and “Button” chapters.</p>
+<p>One resistor, 2 jumper wires, one LED, one breadboard. These are needed for <em>Blinky</em> and <em>Handle Input</em> chapters.</p>
 </li>
 </ul>
 <h2 id="workshop-repository"><a class="header" href="#workshop-repository">Workshop repository</a></h2>
@@ -244,7 +243,7 @@ board.
     </a>
 </div>
 
-<p>The <em>board</em> then, the whole item. The main parts are:</p>
+<p>The <em>board</em> then, is the whole item. Its main parts are:</p>
 <ul>
 <li>The <em>printed circuit board</em> (PCB): the flat fiberglass sheet underneath it all.</li>
 <li>The <em>components</em>: modules on top of the PCB. They interconnect with <em>traces</em> which are thin copper wires. Examples of components: MCU, USB ports LEDs, Pins.
@@ -264,12 +263,12 @@ board.
 <h2 id="what-is-no_std"><a class="header" href="#what-is-no_std">What is no_std?</a></h2>
 <p>This tutorial is “<code>no_std</code>”, but what does it mean? <code>std</code> can refer to:</p>
 <ul>
-<li><code>std</code> crate</li>
-<li>The compiler <code>std</code>-component, including the crates <code>std</code>, <code>core</code>, <code>alloc</code> among others.</li>
+<li><code>std</code>: the crate</li>
+<li><code>std</code>: the component, including the crates <code>std</code>, <code>core</code>, <code>alloc</code> among others.</li>
 </ul>
-<p>This tutorial uses <code>std</code> <em>crate</em> for the former and or <code>std</code> <em>component</em> to distinguish them.</p>
+<p>This book distinguishes them precisely by adding the words <em>crate</em> and <em>component</em>, respectively.</p>
 <p>The microcontroller has no Operative System, but <code>std</code> <em>crate</em> relies on one. Hence, <code>#[no_std]</code> is used in <code>main.rs</code> to indicate that <code>std</code> crate should be excluded.</p>
-<p>To be precise <code>alloc</code> is excluded by default but can be added. A comparison is provided by this <a href="https://docs.rust-embedded.org/book/intro/no-std.html#overview">std_no-std table</a>, and is copied below:</p>
+<p>To be precise <code>alloc</code> is excluded by default but can be added. A comparison is provided by this <a href="https://docs.rust-embedded.org/book/intro/no-std.html#overview">the table</a> below, copied from the Rust Embedded Guide:</p>
 <div class="table-wrapper">
 <table>
 <thead>

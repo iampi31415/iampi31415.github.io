@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>What is no_std? - Embedded Rust Basics.</title>
+        <title>Definitions - Embedded Rust Basics.</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-3e1d7eb8.js";
+            window.path_to_searchindex_js = "../searchindex-97f7ff97.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-cd8f4671.js"></script>
+        <script src="../toc-b8d49595.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -147,7 +147,7 @@
                         <a href="https://github.com/iampi31415/iampi31415.github.io" title="Git repository" aria-label="Git repository">
                             <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
                         </a>
-                        <a href="https://github.com/iampi31415/iampi31415.github.io/edit/main/book/src/ch_1/no_std.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                        <a href="https://github.com/iampi31415/iampi31415.github.io/edit/main/book/src/ch_1/definitions.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
                             <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
                         </a>
 
@@ -181,14 +181,40 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <p>This tutorial is “<code>no_std</code>”, but what does it mean? <code>std</code> can refer to:</p>
+                        <h1 id="definitions"><a class="header" href="#definitions">Definitions</a></h1>
+<h2 id="board-components-and-peripherals"><a class="header" href="#board-components-and-peripherals">Board, components and peripherals</a></h2>
+<p>The <em>board</em>, as shown earlier, is:</p>
+<div class="center w220">
+    <a href="/assets/board.jpg"> <img alt="Close up image of our board." src="/assets/board.jpg" />
+    </a>
+</div>
+
+<p>The <em>board</em> then, the whole item. The main parts are:</p>
+<ul>
+<li>The <em>printed circuit board</em> (PCB): the flat fiberglass sheet underneath it all.</li>
+<li>The <em>components</em>: modules on top of the PCB. They interconnect with <em>traces</em> which are thin copper wires. Examples of components: MCU, USB ports LEDs, Pins.
+<ul>
+<li>The <em>microcontroller</em> or microcontroller unit (MCU): the big square labelled ESP32-C6-WROOM (or some variant). It takes almost half the board. The MCU includes peripherals, CPU and RAM.
+<ul>
+<li>The <em>peripherals</em> are parts of the MCU including: GPIO, UART, I2C, SPI, WiFi, Bluetooth and others.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>A nice explanation of how it all comes together is in the <a href="https://docs.rust-embedded.org/discovery-mb2/04-meet-your-hardware/microbit-v2.html">micro:bit v2</a> book:</p>
+<blockquote>
+<p>Our MCU<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup> has 73 tiny metal pins sitting right underneath it (it’s a so called aQFN73 chip). These pins are connected to traces, the little “roads” that act as the wires connecting components together on the board. The MCU can dynamically alter the electrical properties of the pins. This works similarly to a light switch, altering how electrical current flows through a circuit. By enabling or disabling electrical current to flow through a specific pin, an LED attached to that pin (via the traces) can be turned on and off.</p>
+</blockquote>
+<h2 id="what-is-no_std"><a class="header" href="#what-is-no_std">What is no_std?</a></h2>
+<p>This tutorial is “<code>no_std</code>”, but what does it mean? <code>std</code> can refer to:</p>
 <ul>
 <li><code>std</code> crate</li>
 <li>The compiler <code>std</code>-component, including the crates <code>std</code>, <code>core</code>, <code>alloc</code> among others.</li>
 </ul>
 <p>This tutorial uses <code>std</code> <em>crate</em> for the former and or <code>std</code> <em>component</em> to distinguish them.</p>
 <p>The microcontroller has no Operative System, but <code>std</code> <em>crate</em> relies on one. Hence, <code>#[no_std]</code> is used in <code>main.rs</code> to indicate that <code>std</code> crate should be excluded.</p>
-<p>To be precise <code>alloc</code> is excluded by default but can be added. A comparison is provided by this [std_no-std table][Rust Embedded Guide], and is copied below:</p>
+<p>To be precise <code>alloc</code> is excluded by default but can be added. A comparison is provided by this <a href="https://docs.rust-embedded.org/book/intro/no-std.html#overview">std_no-std table</a>, and is copied below:</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -205,9 +231,15 @@
 </tbody>
 </table>
 </div>
-<p>* Only if you use the <code>alloc</code> crate and use a suitable allocator like [esp-alloc].</p>
+<p>* Only if you use the <code>alloc</code> crate and use a suitable allocator like <a href="https://docs.rs/crate/esp-alloc/latest">esp-alloc</a>.</p>
 <p>** Only if you use the <code>collections</code> crate and configure a global default allocator.</p>
 <p>** HashMap and HashSet are not available due to a lack of a secure random number generator.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>Refers to a different MCU than ours but the concept is the same. <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
 
                     </main>
 

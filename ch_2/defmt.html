@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-3e1d7eb8.js";
+            window.path_to_searchindex_js = "../searchindex-97f7ff97.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-cd8f4671.js"></script>
+        <script src="../toc-b8d49595.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -195,13 +195,18 @@
 <h2 id="defmt-ecosystem"><a class="header" href="#defmt-ecosystem"><code>defmt</code> Ecosystem</a></h2>
 <p><a href="https://github.com/esp-rs/esp-hal/tree/main/esp-println"><code>esp-println</code></a>, <a href="https://github.com/esp-rs/esp-hal/tree/main/esp-backtrace"><code>esp-backtrace</code></a> and <a href="https://github.com/esp-rs/espflash"><code>espflash</code></a> provide mechanisms to use <code>defmt</code>:</p>
 <ul>
-<li><code>espflash</code> has support for different <a href="https://github.com/esp-rs/espflash/blob/main/espflash/README.md#logging-format">logging formats</a>, one of them being <code>defmt</code>.</li>
-<li><code>esp-println</code> needs <code>defmt-espflash</code> feature. As <a href="https://github.com/esp-rs/esp-hal/tree/main/esp-println">their docs</a> state:
+<li>
+<p><code>espflash</code> has support for different <a href="https://github.com/esp-rs/espflash/blob/main/espflash/README.md#logging-format">logging formats</a>, one of them being <code>defmt</code>.</p>
+</li>
+<li>
+<p><code>esp-println</code> needs <code>defmt-espflash</code> feature. As <a href="https://github.com/esp-rs/esp-hal/tree/main/esp-println">their docs</a> state:</p>
 <blockquote>
 <p>Using the <code>defmt-espflash</code> feature, <code>esp-println</code> will install a <code>defmt</code> global logger. Updated the <code>Cargo.toml</code>’s features.</p>
 </blockquote>
 </li>
-<li><code>esp-backtrace</code> needs a <code>defmt</code> feature that uses <code>defmt</code> logging to print panic and exception handler messages.</li>
+<li>
+<p><code>esp-backtrace</code> needs a <code>defmt</code> feature that uses <code>defmt</code> logging to print panic and exception handler messages.</p>
+</li>
 </ul>
 <h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
 <p>Go to <code>exercises/defmt</code> directory.</p>
@@ -241,10 +246,14 @@ esp-backtrace = { version = "0.18.0", features = [
 <p>Add <a href="https://crates.io/crates/defmt">defmt</a> to the dependencies.</p>
 </li>
 <li>
-<p><strong>Logging level</strong>: Use the <code>defmt::println!</code> and some <a href="https://docs.rs/defmt/latest/defmt/#macros"><code>defmt</code> macros</a> to print a few messages.</p>
+<p><strong>Logging level</strong>: Use the <code>defmt::println!</code> and some <a href="https://docs.rs/defmt/latest/defmt/#macros">defmt macros</a> to print a few messages.</p>
 <ul>
-<li>When building the app, set <a href="https://defmt.ferrous-systems.com/filtering.html?highlight=DEFMT_LOG#defmt_log"><code>DEFMT_LOG</code></a> level as done for <code>ESP_LOG</code> earlier.</li>
-<li>An alternative to changing <code>.cargo/config.toml</code> is using <code>DEFMT_LOG=&lt;value&gt; cargo run --release</code>; the same is valid for <code>ESP_LOG</code>.</li>
+<li>
+<p>When building the app, set <a href="https://defmt.ferrous-systems.com/filtering.html?highlight=DEFMT*LOG#defmt_log"><code>DEFMT_LOG</code></a> level as done for <code>ESP_LOG</code> earlier.</p>
+</li>
+<li>
+<p>An alternative to changing <code>.cargo/config.toml</code> is using <code>DEFMT_LOG=&lt;value&gt; cargo run --release</code>; the same is valid for <code>ESP_LOG</code>.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -256,7 +265,7 @@ esp-backtrace = { version = "0.18.0", features = [
 <p>Short articles that give more context:</p>
 <ul>
 <li>defmt <a href="https://defmt.ferrous-systems.com/setup#linker-script">linking process</a> for setting the compilation-time linker up</li>
-<li>defmt <a href="https://defmt.ferrous-systems.com/filtering.html?highlight=DEFMT_LOG#defmt_log">DEFMT_LOG</a> environment variable</li>
+<li>defmt <a href="https://defmt.ferrous-systems.com/filtering.html?highlight=DEFMT*LOG#defmt_log">DEFMT_LOG</a> environment variable</li>
 <li>esp-println <a href="https://github.com/esp-rs/espflash/blob/main/espflash/README.md#logging-format">logging formats</a></li>
 </ul>
 <!--esp links-->

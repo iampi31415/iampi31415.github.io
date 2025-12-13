@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-3e1d7eb8.js";
+            window.path_to_searchindex_js = "../searchindex-97f7ff97.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-cd8f4671.js"></script>
+        <script src="../toc-b8d49595.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -191,7 +191,7 @@
 </li>
 <li>
 <p>Build, flash, and monitor the project with <code>cargo run</code>. You should see:</p>
-<pre><code class="language-console">(..)
+<pre><code class="language-txt">(..)
 0x4080082e - handle_interrupts
 at ??:??
 (..)
@@ -205,10 +205,10 @@ loop..!
 loop..!
 loop..!
 </code></pre>
-</li>
-</ol>
 <p>We will talk about the <code>at ??:??</code> in the next chapter about <code>panic!</code>.</p>
 <p>The <code>loop..!</code> logs come from <a href="https://docs.rs/esp-println/latest/esp_println/">esp-println</a>. They provide us with <code>dbg!</code>, <code>print!</code> and <code>println!</code>.</p>
+</li>
+</ol>
 <h2 id="build-flash-and-monitor"><a class="header" href="#build-flash-and-monitor"><em>Build, flash and monitor</em>?</a></h2>
 <p>The <code>.cargo/config.toml</code> includes this config:</p>
 <pre><code class="language-toml">[target.riscv32imac-unknown-none-elf] # our processor arch.
@@ -226,13 +226,17 @@ Without the <code>--monitor</code> it flashes and exits instead of waiting and p
 <li>Uncomment the lines in <code>src/main.rs</code> and in <code>Cargo.toml</code> to enable <code>log</code>.</li>
 <li>The <code>log</code> crate logging level is controlled with <code>ESP_LOG</code> under the <code>[env]</code> section in <code>.cargo/config.toml</code>.
 <ul>
-<li>Change the <code>ESP_LOG</code> variable to turn <code>off</code> all logs. Re-run <code>cargo run --release</code>, to test how it works.</li>
-<li>Try with other levels, for example, with <code>trace</code>.</li>
+<li>
+<p>Change the <code>ESP_LOG</code> variable to turn <code>off</code> all logs. Re-run <code>cargo run --release</code>, to test how it works.</p>
+</li>
+<li>
+<p>Try with other levels, for example, with <code>trace</code>.</p>
+</li>
 </ul>
 </li>
 </ol>
-<p>The <code>exercises/hello_world/examples/hello_world.rs</code> contains a solution.
-You can run it with the following command <code>cargo run --release --example hello_world</code>. You should first fix the lines at the bottom of <code>Cargo.toml</code>.</p>
+<p>The <code>exercises/hello_world/examples/hello_world.rs</code> contains a solution.</p>
+<p>You can run it with the following command <code>cargo run --release --example hello_world</code>. You should first fix the lines at the bottom of <code>Cargo.toml</code>.</p>
 <h2 id="suggested-reading"><a class="header" href="#suggested-reading">Suggested Reading</a></h2>
 <ul>
 <li><a href="https://docs.rs/esp-println/latest/esp_println/">esp-println</a></li>

@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-3e1d7eb8.js";
+            window.path_to_searchindex_js = "../searchindex-97f7ff97.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-cd8f4671.js"></script>
+        <script src="../toc-b8d49595.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -181,41 +181,34 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <p>This is an embedded-rust tutorial using the esp32-c6 board.</p>
+                        <h1 id="about-this-tutorial"><a class="header" href="#about-this-tutorial">About this tutorial</a></h1>
+<p>This is an embedded-rust tutorial using the esp32-c6 board.</p>
 <p>Rust knowledge is assumed, but no embedded experience is required. The content was written for Unix (Linux, MacOS).</p>
-<p>The book aims to be self-contained, but short <a href="#Suggested-reading">reading material</a> will be suggested. If the license allows for, we will copy useful content here, and provide the source.</p>
-<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
-<ul>
-<li>The “board” is the whole thing also known as DevKit.</li>
-<li>The microcontroller or microcontroller unit (MCU) is the ESP32-C6-WROOM (or some variant) and takes almost half the board. The MCU includes peripherals, CPU, RAM.</li>
-<li>The <em>peripherals</em> are part of the MCU: like GPIO, UART, I2C, SPI, WiFi, Bluetooth and other peripherals.</li>
-</ul>
+<p>The book aims to be self-contained, but short <a href="#suggested-reading">reading material</a> will be suggested. If the license allows for, we will copy useful content here, and provide the source.</p>
 <h2 id="required-hardware"><a class="header" href="#required-hardware">Required Hardware</a></h2>
-<ul>
-<li>
 <p>The esp32-c6 board is available on Mouser, Aliexpress and other retailers. It should look similar to:</p>
-  
-<div class="w320">
-      <a href="/assets/board.jpg">
-          <img alt="Close up image of our board." src="/assets/board.jpg" />
-      </a>
-  </div>
+<div class="center w220">
+    <a href="/assets/board.jpg"> <img alt="Close up image of our board." src="/assets/board.jpg" />
+    </a>
+</div>
 
-</li>
-</ul>
 <p>Other required hardware:</p>
 <ul>
-<li>USB-C cable to link your computer and the board.
+<li>
+<p>USB-C cable to link your computer and the board.</p>
 <ul>
-<li>The cable <em>has to</em> support data transfers and not be power-only.</li>
+<li>The cable <em>has to</em> support data transfers and not be power-only.
+y.</li>
 </ul>
 </li>
-<li>One resistor, 2 jumper wires, one LED, one breadboard. These are needed for “Blinky” and “Button” chapters.</li>
+<li>
+<p>One resistor, 2 jumper wires, one LED, one breadboard. These are needed for “Blinky” and “Button” chapters.</p>
+</li>
 </ul>
 <h2 id="workshop-repository"><a class="header" href="#workshop-repository">Workshop repository</a></h2>
 <p>The source for the book and code-exercises is at <a href="https://github.com/iampi31415/iampi31415.github.io">https://github.com/iampi31415/iampi31415.github.io</a>.
 To get started, clone repo and then change directory:</p>
-<pre><code class="language-bash">git clone "https://github.com/iampi31415/iampi31415.github.io"
+<pre><code>git clone https://github.com/iampi31415/iampi31415.github.io
 cd iampi31415.github.io
 </code></pre>
 <p><strong>Repository contents</strong>. The directory contains:</p>
@@ -238,8 +231,10 @@ cd iampi31415.github.io
 * [MCU datasheet] i.e for the esp32-c6 micro controller.
 * [reference manual] for esp32-c6 board: large, complete description of
 board.
-[MCU datasheet]: https://documentation.espressif.com/esp32-c6-wroom-1_wroom-1u_datasheet_en.pdf
-[reference manual]: https://documentation.espressif.com/esp32-c6_technical_reference_manual_en.pdf
+[MCU datasheet]: https://documentation.espressif.com/esp32-c6-wroom-1*wroom-1u*datasheet_en.pdf
+
+[reference manual]: https://documentation.espressif.com/esp32-c6*technical*reference*manual*en.pdf
+
 [Code examples]: https://github.com/esp-rs/esp-hal/tree/main/examples
 -->
 
@@ -248,7 +243,7 @@ board.
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="../ch_1/no_std.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../ch_1/definitions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -259,7 +254,7 @@ board.
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="../ch_1/no_std.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../ch_1/definitions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

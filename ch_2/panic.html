@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-3e1d7eb8.js";
+            window.path_to_searchindex_js = "../searchindex-97f7ff97.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-cd8f4671.js"></script>
+        <script src="../toc-b8d49595.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -181,27 +181,35 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="panic"><a class="header" href="#panic">Panic!</a></h1>
-<p>If something goes wrong, our program will crash —another word for <code>panic!</code>. In embedded, we will always need to add a panic-handler.</p>
-<p>Let’s access the project at <code>exercises/panic</code>, and modify the code so thatit panics.</p>
+                        <h1 id="panic"><a class="header" href="#panic">Panic</a></h1>
+<p>If something goes wrong, the program will <code>panic!</code>. In embedded, we will always need to add a <code>panic-handler</code>.</p>
+<p><a href="https://docs.rs/crate/esp-backtrace/latest">esp-backtrace</a> provides a <code>panic-handler</code> feature that handles <code>panic!</code>. This is why we need to <code>use esp-backtrace as _</code>.</p>
+<p>Let’s access the project at <code>exercises/panic</code>, and modify the code to test <code>panic!</code>.</p>
 <p>We will also take a look at compilation <em>profiles</em>. We don’t need deep knowledge about profiles, just the very basics.</p>
 <p><code>cargo</code> uses profile-settings to control compilation using defaults when unspecified. We are interested in controlling a few aspects:</p>
 <ul>
 <li>Should it be as fast as possible? As short as possible?</li>
 <li>Should it include information useful for debugging?</li>
 </ul>
-<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<h2 id="exercise-part-1"><a class="header" href="#exercise-part-1">Exercise: part 1</a></h2>
 <ol>
-<li>In <code>main.rs</code> add a <code>panic!</code> somewhere, e.g. after our <code>println</code>.</li>
-<li>Run the code with <code>cargo run</code>; this uses the <em>development profile</em>.
+<li>
+<p>In <code>main.rs</code> use the <code>esp-backtrace</code> crate.</p>
+</li>
+<li>
+<p>Then add a <code>panic!</code> somewhere, e.g. after our <code>println</code>.</p>
+</li>
+<li>
+<p>Run the code with <code>cargo run</code>; this uses the <em>development profile</em>.</p>
 <ul>
 <li>It outputs debug information into the compiled binary.</li>
 </ul>
 </li>
-<li>Then run with <em>release profile</em> <code>cargo run --release</code>.
+<li>
+<p>Then run with <em>release profile</em> <code>cargo run --release</code>.</p>
 <ul>
-<li>This profile will not output all debug information in the binary. We should find:</li>
-</ul>
+<li>
+<p>This profile will not output all debug information in the binary. We should find:</p>
 <pre><code class="language-console">Hello world!
 ====================== PANIC ======================
 panicked at examples/panic.rs:24:5:
@@ -211,16 +219,31 @@ Backtrace:
 main
     at ??:??
 </code></pre>
-The default <code>--release</code> behaviour <em>excludes</em> debug information and minimises the binary size; the backtrace shows the missing debug information with <code>??</code>.</li>
+<p>The default <code>--release</code> behaviour <em>excludes</em> debug information and minimises the binary size; the backtrace shows the missing debug information with <code>??</code>.</p>
+</li>
+</ul>
+</li>
 </ol>
+<h2 id="exercise-part-2"><a class="header" href="#exercise-part-2">Exercise: part 2</a></h2>
 <p>We nearly always use <code>--release</code> (we want small binary size). If we want debug information we need to configure the release profile in <code>.cargo/config.toml</code>:</p>
 <pre><code class="language-diff">+[profile.release]
 +debug = true
 </code></pre>
-<p>Now it will emit debug information in the ELF binary file; <em>the info isn’t flashed</em> into the target, the info is just used to display the backtrace.
-4. Re-run the program with <code>--release</code> and confirm <code>??:??</code> is now filled in.</p>
+<p>Now it will emit debug information in the ELF binary file; <em>yet debug info isn’t flashed</em> into the target, it is just used to display the backtrace.</p>
+<ul>
+<li>Re-run the program with <code>--release</code> and confirm <code>??:??</code> is now filled in.</li>
+</ul>
 <p><code>exercises/panic/examples/panic.rs</code> contains a solution. It can be run with: <code>cargo run --example panic --release</code>.</p>
-<p>We have learnt how to <code>panic!</code> and how to configure compilation so that panics print a backtrace with all debug information.</p>
+<h2 id="recap"><a class="header" href="#recap">Recap</a></h2>
+<ul>
+<li><code>esp-backtrace</code> handles panics (by us or by any library).</li>
+<li>We can manually use <code>panic!</code> to exit the program.</li>
+<li>Configure compilation so that panics print a backtrace with all debug information.</li>
+</ul>
+<h3 id="suggested-reading"><a class="header" href="#suggested-reading">Suggested Reading</a></h3>
+<ul>
+<li><a href="https://docs.rs/crate/esp-backtrace/latest">esp-backtrace</a></li>
+</ul>
 
                     </main>
 

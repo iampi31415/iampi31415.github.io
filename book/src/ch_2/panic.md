@@ -1,4 +1,3 @@
-# Panic
 
 If something goes wrong, the program will `panic!`. In embedded, we will always need to add a `panic-handler`.
 

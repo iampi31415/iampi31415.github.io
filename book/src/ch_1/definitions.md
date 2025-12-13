@@ -1,4 +1,3 @@
-# Definitions
 
 ## Board, components and peripherals
 

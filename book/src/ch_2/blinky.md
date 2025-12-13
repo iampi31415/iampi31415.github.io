@@ -1,4 +1,3 @@
-# Blinky
 
 We will now create the iconic _blinky_.
 

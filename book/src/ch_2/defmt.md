@@ -1,4 +1,3 @@
-# `defmt`
 
 [`defmt`][defmt] is an efficient logging framework. Just like `log`, the `defmt` crate enables `defmt::info`, `defmt::warn` and other levels. It also has a `defmt::println!` macro.
 

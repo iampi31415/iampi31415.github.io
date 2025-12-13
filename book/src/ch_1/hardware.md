@@ -1,4 +1,3 @@
-# Hardware
 
 Now it's time to connect the host computer with the development board.
 

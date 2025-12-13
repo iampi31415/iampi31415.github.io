@@ -1,4 +1,3 @@
-# About this tutorial
 
 This is an embedded-rust tutorial using the esp32-c6 board.
 

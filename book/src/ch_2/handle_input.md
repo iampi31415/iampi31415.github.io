@@ -1,4 +1,3 @@
-# Handle Input
 
 Using same wiring from the `blinky` chapter, let's now use external input to make the LED blink.
 

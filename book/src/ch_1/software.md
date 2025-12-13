@@ -1,4 +1,3 @@
-# Software
 
 Let's install all we need.
 
@@ -58,7 +57,6 @@ We could install `nightly` in step `1.`; then `2.` and `3.` work the same.
 But with `nightly` we can skip step `2.` and use modified `3.`
 
 ```bash
-# rust-src is the difference
 rustup component add rust-src rustfmt clippy rust-analyzer
 ```
 
@@ -79,7 +77,6 @@ We also need to modify the `rust-toolchain.toml`:
 -channel = "stable"
 components = ["rust-src"]
 -targets = ["riscv32imac-unknown-none-elf"]
-# ^^^^^ targets are needed with "stable" only.
 ```
 
 When running `cargo run --release` core will be compiled along with our crate (not used the precompiled one). However, this is *unstable* and it is only mentioned here as a cool feature.

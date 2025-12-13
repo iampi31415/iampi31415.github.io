@@ -1,4 +1,3 @@
-# Hello World
 
 There is a lot to learn, so let's start simple.
 

@@ -7,7 +7,12 @@
  # allow html
   "MD033",
  # allow empty links (draft chapters)
-  "MD042"
+  "MD042",
+ # Allow no top level heading because the heading is
+ # in the over-arching section.
+  "MD041",
+  # this one should be for SUMMARY.md only.
+  "MD025"
 ] 
 
 # enable = ["MD001", "MD003", "MD004"]

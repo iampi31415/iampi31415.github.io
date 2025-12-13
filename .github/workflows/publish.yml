@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build, Test and Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # To push a branch 
+      pull-requests: write  # To create a PR from that branch
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+      - name: "Cache cargo"
+        # https://github.com/actions/cache
+        id: cache-cargo
+        uses: "actions/cache@v4"
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          save-always: true
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+      # no need to test whether they are installed with caching.
+      # so make it all pass, it some is not installed
+      # building the book will fail.
+      - run: cargo install mdbook lychee rumdl || echo "Check logs" && true
+      - run: lychee --root-dir book/src book/src/
+      - run: rumdl check #--fix would cause trouble if we dislike the fix.
+      - run: mdbook build book
+      - uses: JamesIves/github-pages-deploy-action@v4.7.4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: book/book/ # The folder the action should deploy.

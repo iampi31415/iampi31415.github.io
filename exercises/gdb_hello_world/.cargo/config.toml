@@ -1,0 +1,24 @@
+# the key != bw hello_world and this project
+# is that we run / flash with probe-rs
+[target.riscv32imac-unknown-none-elf]
+runner = "espflash flash"
+
+
+[build]
+rustflags = [ # compiler flags
+  "-C",
+  "link-arg=-Tlinkall.x",
+  "-C",                   # this option is due to esp-backtrace
+  "force-frame-pointers",
+]
+
+target = "riscv32imac-unknown-none-elf"
+
+[unstable]
+build-std = ["core"]
+
+# [env]
+# ESP_LOG = "info"
+
+[profile.release]
+debug=true

@@ -1,0 +1,34 @@
+[book]
+description = "Embedded Rust (no_std) on esp32-c6."
+language = "en"
+src = "src"
+title = "Embedded Rust Basics."
+#multilingual = false
+
+[rust]
+edition = "2024"
+
+[output.html]
+git-repository-url = "https://github.com/iampi31415/iampi31415.github.io"
+admonitions = true
+smart-punctuation = true
+edit-url-template = "https://github.com/iampi31415/iampi31415.github.io/edit/main/book/{path}"
+sidebar-header-nav = true
+no-section-label = false
+additional-css = ["./src/assets/custom.css"]
+# git-repository-icon = "fab-github"
+# input-404 = "not-found.md"
+# theme = "my-theme"
+# default-theme = "light"
+# preferred-dark-theme = "navy"
+# definition-lists = true
+# mathjax-support = false
+# additional-js = ["custom.js"]
+
+[output.html.print]
+enable = true    # include support for printable output
+page-break = true # insert page-break after each chapter
+
+[output.html.fold]
+enable = false    # whether or not to enable section folding
+level = 0         # the depth to start folding

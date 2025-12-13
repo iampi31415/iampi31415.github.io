@@ -1,0 +1,19 @@
+[default.probe]
+protocol = "Jtag" # instead of Swd
+
+[default.general]
+chip = "esp32c6"
+
+[default.rtt]
+enabled = true
+
+[default.gdb]
+# open "GDB stub" after flashing.
+enabled = false
+
+# [default.reset]
+# # Whether or not the target should be reset.
+# # When flashing is enabled as well, the target will be reset after flashing regardless of this setting.
+# enabled = true
+# # Whether or not the target should be halted after reset.
+# halt_afterwards = true

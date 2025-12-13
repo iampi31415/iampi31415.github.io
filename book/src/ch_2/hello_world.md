@@ -10,19 +10,16 @@ There is a lot to learn, so let's start simple.
 2. Build, flash, and monitor the project with `cargo run`. You should see:
 
     ```txt
-    (..)
+    ..
     0x4080082e - handle_interrupts
     at ??:??
-    (..)
-    Chip type:         esp32c6 (revision v0.0)
-    (..)
+    ..
     Commands:
         CTRL+R    Reset chip
         CTRL+C    Exit
-    (..)
+    ..
     loop..!
-    loop..!
-    loop..!
+    ..
     ```
 
     We will talk about the `at ??:??` in the next chapter about `panic!`.

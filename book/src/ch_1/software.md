@@ -1,29 +1,28 @@
-
 Let's install all we need.
 
 ## Rust Tools
 
-1. Install Rust Toolchain following the steps in <https://rustup.rs/>
+1. Install the Rust toolchain following the steps in <https://rustup.rs/>
     - The Rust Toolchain is `rustup` plus many components `cargo`, `rustc`, the *compiled* `std` component and so on.
-2. We also want the compiled `std`-component for our target microcontroller
+2. Add the compiled `std`-component for our target microcontroller
 
     ```bash    
     rustup target add riscv32imac-unknown-none-elf
     ```
 
-3. Other development components:
+3. Add development components:
 
     ```bash
     rustup component add rust-analyzer rust-src 
     ```
 
-    `rust-src` is the `std`-component source code, useful for the `rust-analyzer`.
+    `rust-src` is the `std`-component's source code, used by `rust-analyzer`.
 
 ## Espressif tools
 
 [`espflash`](https://github.com/esp-rs/espflash/tree/main/espflash) is used for flashing our ELF binary (our program) into the board.
 
-Install it with: `cargo install espflash`
+Install `espflash` with: `cargo install espflash`
 
 ## Build dependencies
 

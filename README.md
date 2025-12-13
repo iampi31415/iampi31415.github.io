@@ -24,9 +24,7 @@ There are two options:
     git clone https://github.com/iampi31415/iampi31415.github.io
     ```
 
-- Visit the [repository](<https://github.com/iampi31415/iampi31415.github.io>
-
-), and click the green "Code" button and then the "Download Zip" one.
+- Visit the [repository], and click the green "Code" button and then the "Download Zip" one.
 
 The exercises are under `exercises/`.
 
@@ -67,5 +65,6 @@ This tutorial is based off <https://github.com/esp-rs/no_std-training>.
 Code contributions are under MIT license.
 Any book-text contributions are under CC-BY-SA v4.0 license.
 
+[repository]: https://github.com/iampi31415/iampi31415.github.io
 [mit]: ./LICENSE-MIT
 [cc]: ./LICENSE-CC-BY-SA

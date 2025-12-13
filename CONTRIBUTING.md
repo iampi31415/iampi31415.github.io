@@ -2,13 +2,13 @@
 
 Please note that any contribution is under MIT license unless stated otherwise.
 
-1. Fork, 
+1. Fork,
 2. Create a new branch "fix-x"
 3. Send PR.
 
 ## Best practices
 
-These are a guideline, not mandatory. 
+These are a guideline, not mandatory.
 
 ### No AI, no emojis
 

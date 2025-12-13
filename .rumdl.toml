@@ -11,9 +11,11 @@
  # Allow no top level heading because the heading is
  # in the over-arching section.
   "MD041",
-  # this one should be for SUMMARY.md only.
-  "MD025"
 ] 
+
+[per-file-ignores]
+"book/src/SUMMARY.md" = ["MD025"]  # Allow multiple H1 in table of contents
+
 
 # enable = ["MD001", "MD003", "MD004"]
 

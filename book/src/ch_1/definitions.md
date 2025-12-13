@@ -7,7 +7,7 @@ The *board*, as shown earlier, is:
     </a>
 </div>
 
-The *board* then, the whole item. The main parts are:
+The *board* then, is the whole item. Its main parts are:
 
 - The *printed circuit board* (PCB): the flat fiberglass sheet underneath it all.
 - The *components*: modules on top of the PCB. They interconnect with *traces* which are thin copper wires. Examples of components: MCU, USB ports LEDs, Pins.

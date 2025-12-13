@@ -19,9 +19,8 @@ Other required hardware:
 - USB-C cable to link your computer and the board.
 
     - The cable *has to* support data transfers and not be power-only.
-y.
 
-- One resistor, 2 jumper wires, one LED, one breadboard. These are needed for "Blinky" and "Button" chapters.
+- One resistor, 2 jumper wires, one LED, one breadboard. These are needed for *Blinky* and *Handle Input* chapters.
 
 ## Workshop repository
 

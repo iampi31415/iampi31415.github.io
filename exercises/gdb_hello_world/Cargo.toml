@@ -9,17 +9,17 @@ license = "MIT"
 authors = ["gh:iampi31415"]
 
 [dependencies]
-esp-hal = { version = "1.0.0", features = [
-  "log-04",    # probe-rs+defmt; espflash+log
-  "esp32c6",
-  "unstable",
-] }
+log = "0.4.29"
 esp-bootloader-esp-idf = { version = "0.4.0", features = ["esp32c6"] }
 # to print
 critical-section = "1.2.0" # ?
 esp-backtrace = { version = "0.18.1", features = ["esp32c6", "panic-handler", "println"] }
-log = "0.4.29"
 esp-println = { version = "0.16.1", features = ["log-04", "esp32c6"] }
+esp-hal = { version = "1.0.0", features = [
+  "log-04", # defmt or log
+  "esp32c6",
+  "unstable",
+] }
 
 
 [profile.dev]
@@ -29,7 +29,7 @@ debug = true
 
 [profile.release]
 codegen-units = 1        # LLVM can perform better optimizations using a single thread
-debug = 2
+debug = true
 debug-assertions = false
 incremental = false
 lto = 'fat'

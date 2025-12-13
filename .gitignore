@@ -14,4 +14,9 @@ book/book
 .DS_Store
 .devcontainer
 a.sh
+
+# debugging files
 openocd.log
+gdb.log
+gdb.txt
+.gdb_history

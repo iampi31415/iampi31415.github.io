@@ -24,14 +24,14 @@ A nice explanation of how it all comes together is in the [micro:bit v2][MB2] bo
 
 This tutorial is "`no_std`", but what does it mean? `std` can refer to:
 
-- `std` crate
-- The compiler `std`-component, including the crates `std`, `core`, `alloc` among others.
+- `std`: the crate
+- `std`: the component, including the crates `std`, `core`, `alloc` among others.
 
-This tutorial uses `std` *crate* for the former and or `std` *component* to distinguish them.
+This book distinguishes them precisely by adding the words *crate* and *component*, respectively.
 
 The microcontroller has no Operative System, but `std` *crate* relies on one. Hence, `#[no_std]` is used in `main.rs` to indicate that `std` crate should be excluded.
 
-To be precise `alloc` is excluded by default but can be added. A comparison is provided by this [std_no-std table][Rust Embedded Guide], and is copied below:
+To be precise `alloc` is excluded by default but can be added. A comparison is provided by this [the table][Rust Embedded Guide] below, copied from the Rust Embedded Guide:
 
 | feature                                                   | no\_std | std |
 |-----------------------------------------------------------|--------|-----|

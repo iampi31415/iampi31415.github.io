@@ -2,8 +2,7 @@
 
 # Summary
 
-## Introduction
-
+# Introduction
 - [About this tutorial](./ch_1/intro.md)
 - [Definitions](./ch_1/definitions.md)
 - [Hardware](./ch_1/hardware.md)
@@ -11,8 +10,7 @@
 
 ------
 
-## Starting Simple
-
+# Starting Simple
 - [Hello World](./ch_2/hello_world.md)
 - [Panic](./ch_2/panic.md)
 - [Blinky](./ch_2/blinky.md)

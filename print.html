@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-44683c20.js";
+            window.path_to_searchindex_js = "searchindex-7f26b295.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-f2d9d81d.js"></script>
+        <script src="toc-674a30d6.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -684,6 +684,127 @@ esp-backtrace = { version = "0.18.0", features = [
 </ul>
 <!--esp links-->
 <!--defmt links-->
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="set-up"><a href="#set-up" class="header">Set Up</a></h1>
+<p>Programs are debugged using:</p>
+<ul>
+<li><code>dbg!</code> or <code>print!</code> information to know the value of a variable.</li>
+<li><code>assert!</code> expected values</li>
+<li>Write unit tests</li>
+</ul>
+<p>To access these finer details, we can use a <em>debugger</em>.</p>
+<h2 id="software-needed"><a class="header" href="#software-needed">Software needed</a></h2>
+<p>Two programs will be needed:</p>
+<ul>
+<li>GNU Debugger (<code>gdb</code>): inspect and stop the program as it runs.
+<ul>
+<li>Linux has <code>gdb</code> installed. On MacOS, install it with <code>brew install gdb</code>.</li>
+</ul>
+</li>
+<li>OpenOCD (<code>openocd</code>): handles the communication with the board.</li>
+</ul>
+<h3 id="openocd"><a class="header" href="#openocd">OpenOCD</a></h3>
+<p>Download the latest <code>openocd</code> for your laptop architecture from the <code>openocd-esp32</code> <a href="https://github.com/espressif/openocd-esp32/releases">github repo</a>. The repo is a fork of <code>openocd</code> targetted at <code>esp32</code> boards.</p>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Please, check the commands before executing them.</p>
+</blockquote>
+<ul>
+<li>For Linux amd-64:
+<pre><code class="language-bash"># Linux amd64. See releases page for other archs. 
+cd ${HOME} # go to home so we download in a visible place.
+OPENOCD_ZIP_NAME=openocd-esp32-linux-amd64-0.12.0-esp32-20250707.tar.gz
+DATE=v0.12.0-esp32-20250707
+wget https://github.com/espressif/openocd-esp32/releases/download/${DATE}/${OPENOCD_ZIP_NAME}
+tar -xvf ${OPENOCD_ZIP_NAME}
+</code></pre>
+</li>
+<li>For MacOS arm64:
+<pre><code class="language-bash">cd ${HOME}
+OPENOCD_ZIP_NAME=openocd-esp32-macos-arm64-0.12.0-esp32-20250707.tar.gz
+DATE=v0.12.0-esp32-20250707
+wget https://github.com/espressif/openocd-esp32/releases/download/${DATE}/${OPENOCD_ZIP_NAME}
+tar -xvf ${OPENOCD_ZIP_NAME}
+</code></pre>
+</li>
+</ul>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Below, it is assumed the output of the command above was a directory named <code>openocd-esp32</code>.</p>
+</blockquote>
+<h3 id="modify-the-path"><a class="header" href="#modify-the-path">Modify the PATH</a></h3>
+<p>Let’s add a path to the <code>PATH</code> variable, by editing the <code>.zshrc</code> or <code>.bashrc</code> file.</p>
+<p>Additionally, the <code>OPENOCD_SCRIPTS</code> variable is defined. <code>openocd</code> uses that variable to find the board’s configuration.</p>
+<pre><code class="language-bash"># add `openocd` to PATH
+export PATH=${HOME}/openocd-esp32/bin:${PATH}
+# Define openocd scripts/configs location.
+export OPENOCD_SCRIPTS="${HOME}/openocd-esp32/share/openocd/scripts"
+</code></pre>
+<p>Then source the profile:</p>
+<pre><code class="language-bash">source ~/.bashrc # or ~/.zshrc
+</code></pre>
+<p>Then check it is installed with <code>openocd --version</code>. Now to some exercises.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gdb"><a href="#gdb" class="header">GDB</a></h1>
+<h3 id="gdb-commands"><a class="header" href="#gdb-commands">GDB commands</a></h3>
+<ul>
+<li><code>next</code> step one line over.</li>
+<li><code>continue</code> or <code>c</code>: continue executing up to next break point.</li>
+<li><code>break fn_name</code>: break point at function name.
+<ul>
+<li>There may be many with same name. So we need the path.
+<ul>
+<li>For example: <code>break gdb_hello_world::__risc_v_rt__main</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>break lineno</code>: break point at line number of currently-focused file.
+<ul>
+<li>Example: <code>break 19</code>, or <code>br 19</code>.</li>
+</ul>
+</li>
+<li><code>break my_file.rs:lineno</code>: example <code>break main.rs:17</code>.</li>
+<li><code>monitor reset halt</code>: restarts and halts it.</li>
+<li>layout:
+<ul>
+<li><code>layout src</code>: shows source code and CLI.</li>
+<li><code>layout asm</code>: shows assembly source and CLI.</li>
+<li><code>tui disable</code> to disable the layout.</li>
+</ul>
+</li>
+<li><code>info break</code> to show breakpoints</li>
+<li><code>info locals</code> to show variables.</li>
+<li><code>print x</code> to print variable <code>x</code>. Also <code>print &amp;x</code> prints the address of <code>x</code>.</li>
+</ul>
+<h3 id="exercises"><a class="header" href="#exercises">Exercises</a></h3>
+<ol>
+<li>Access <code>exercises/gdb_hello_world</code></li>
+<li>Inspect the configuration files <code>openocd.cfg</code> (for <code>openocd</code> ) and <code>.gdbinit</code> (for <code>gdb</code>).</li>
+<li>Execute <code>cargo run</code>, leave out <code>--release</code> to use the development profile.
+<ul>
+<li>Without it, cargo will remove / optimise lines.</li>
+<li>We <em>should</em> debug with <code>--release</code> to ensure the best outcomes.</li>
+<li>But this examples is just to get started.</li>
+</ul>
+</li>
+<li>Run <code>gdb</code> in one terminal window, and <code>openocd</code> in another window (same directory!).</li>
+<li>The image shows what <code>gdb</code> should look like at this stage.
+<ul>
+<li>Should have a breakpoint in <code>_peripherals</code> which means <code>gdb</code> stopped execution there.</li>
+</ul>
+ 
+<div class="center w420">
+ <a href="/assets/gdb.png">
+ <img src="/assets/gdb.png" alt="GDB screenshot showing our main.rs source code. It has a B where the breakpoint is." />
+ </a>
+ </div>
+
+</li>
+<li>Add a <code>break</code> point in <code>main.rs</code> where <code>a/=2</code></li>
+<li><code>print</code> the resulting value.</li>
+<li>Exit with <code>Ctrl+D</code> or <code>Ctrl+C</code>.</li>
+</ol>
 
                     </main>
 

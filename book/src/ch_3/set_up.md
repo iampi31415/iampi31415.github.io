@@ -9,11 +9,13 @@ To access these finer details, we can use a _debugger_.
 ## Software needed
 
 Two programs will be needed:
+
 - GNU Debugger (`gdb`): inspect and stop the program as it runs.
     - Linux has `gdb` installed. On MacOS, install it with `brew install gdb`.
 - OpenOCD (`openocd`): handles the communication with the board.
 
 ### OpenOCD
+
 Download the latest `openocd` for your laptop architecture from the `openocd-esp32` [github repo]. The repo is a fork of `openocd` targetted at `esp32` boards.
 
 > [!IMPORTANT]
@@ -40,9 +42,9 @@ Download the latest `openocd` for your laptop architecture from the `openocd-esp
 > [!IMPORTANT]
 > Below, it is assumed the output of the command above was a directory named `openocd-esp32`.
 
-### Extend PATH variable
+### Modify the PATH
 
-We will add a location to `PATH`, by editing the `.zshrc` or `.bashrc` file. 
+Let's add a path to the `PATH` variable, by editing the `.zshrc` or `.bashrc` file.
 
 Additionally, the `OPENOCD_SCRIPTS` variable is defined. `openocd` uses that variable to find the board's configuration.
 
@@ -60,6 +62,5 @@ source ~/.bashrc # or ~/.zshrc
 ```
 
 Then check it is installed with `openocd --version`. Now to some exercises.
-
 
 [github repo]: https://github.com/espressif/openocd-esp32/releases

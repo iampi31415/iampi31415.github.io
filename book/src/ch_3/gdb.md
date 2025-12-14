@@ -1,4 +1,5 @@
 ### GDB commands
+
 - `next` step one line over.
 - `continue` or `c`: continue executing up to next break point.
 - `break fn_name`: break point at function name.
@@ -17,6 +18,7 @@
 - `print x` to print variable `x`. Also `print &x` prints the address of `x`.
 
 ### Exercises
+
 1. Access `exercises/gdb_hello_world`
 2. Inspect the configuration files `openocd.cfg` (for `openocd` ) and `.gdbinit` (for `gdb`).
 3. Execute `cargo run`, leave out `--release` to use the development profile.
@@ -31,7 +33,6 @@
     <img src="/assets/gdb.png" alt="GDB screenshot showing our main.rs source code. It has a B where the breakpoint is."/>
     </a>
     </div>
-6. Add a `break` point in `main.rs` where `a/=2` 
+6. Add a `break` point in `main.rs` where `a/=2`
 7. `print` the resulting value.
 8. Exit with `Ctrl+D` or `Ctrl+C`.
-

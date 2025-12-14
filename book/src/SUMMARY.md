@@ -2,8 +2,6 @@
 
 # Summary
 
-# Introduction
-
 - [About this tutorial](./ch_1/intro.md)
 - [Definitions](./ch_1/definitions.md)
 - [Hardware](./ch_1/hardware.md)

@@ -29,4 +29,4 @@
 # Debugging
 
 - [Set Up](./ch_3/set_up.md)
-- [Exercises](./ch_3/debug.md)
+- [GDB](./ch_3/gdb.md)

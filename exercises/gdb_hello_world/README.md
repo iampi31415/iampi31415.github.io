@@ -1,6 +1,7 @@
 # GDB exercise
 
 ## OpenOCD
+
 Useful commands for `openocd`:
 
 - `-f <cfg_file>`.
@@ -9,6 +10,7 @@ Useful commands for `openocd`:
 - `-s`: directory to search for config files.
 
 An example `openocd.cfg` file is:
+
 ```openocd
 # Opens GDB port at 3333
 # debug_level 1
@@ -20,7 +22,8 @@ source [find board/esp32c6-builtin.cfg]
 
 Start it as `openocd`, and will take the config file.
 
-## GDB 
+## GDB
+
 An example `.gdbinit`:
 
 ```gdb

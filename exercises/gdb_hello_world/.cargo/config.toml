@@ -20,5 +20,9 @@ build-std = ["core"]
 # [env]
 # ESP_LOG = "info"
 
+[profile.dev]
+opt-level = 0               # To see the assembly code for our operations.
+overflow-checks = false     # Disable integer overflow checks.
+
 [profile.release]
 debug=true

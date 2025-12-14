@@ -22,8 +22,11 @@
 - [I2C]() <!--draft-->
 - [SPI]() <!--draft-->
 
-<!-- - [Detect a button press](./button.md) -->
-<!-- - [Detect a button press with interrupt](./interrupt.md) -->
+<!-- - [Detect a button press](./button.md) --> <!-- - [Detect a button press with interrupt](./interrupt.md) -->
 <!-- - [DMA](./dma_spi.md) -->
 <!-- - [HTTP Client](./http_client.md) -->
 <!-- - [Using `defmt`](./defmt.md) -->
+# Debugging
+
+- [Set Up](./ch_3/set_up.md)
+- [Exercises](./ch_3/debug.md)

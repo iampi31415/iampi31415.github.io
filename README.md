@@ -49,7 +49,7 @@ The book is at <https://iampi31415.github.io>. To download the book one of:
 
 ## License
 
-This tutorial is based off <https://github.com/esp-rs/no_std-training>, at the [time of this commit.]
+This tutorial is based off <https://github.com/esp-rs/no_std-training>, at the [this commit] on "Nov 25, 2025".
 
 - The code under `exercises/` licensed under the [MIT License][mit].
 - The text in the book is under of the [CC-BY-SA V4][cc] license.
@@ -60,6 +60,6 @@ Code contributions are under MIT license.
 
 Any book-prose contributions are under CC-BY-SA v4.0 license. The book's code snippets are also under MIT license.
 
-[time of this commit]: https://github.com/esp-rs/no_std-training/commit/deb5f68b09daa5c14eba3f96d97b79c028409566
+[this commit]: https://github.com/esp-rs/no_std-training/commit/deb5f68b09daa5c14eba3f96d97b79c028409566
 [mit]: ./LICENSE-MIT
 [cc]: ./LICENSE-CC-BY-SA

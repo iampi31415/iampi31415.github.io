@@ -1,0 +1,25 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+# previous author https://github.com/SergioGasquez
+authors = ["gh:iampi31415"]
+
+[dependencies.esp-hal] # main crate
+version = "1.0.0"
+# unstable allows us to use `esp_hal::delay::Delay`.
+# you will find an alternative in the next chapter.
+features = ["esp32c6", "unstable"]
+
+[dependencies]
+esp-backtrace = { version = "0.18.0", features = [
+  "esp32c6",
+  "panic-handler",
+  "println",
+] }
+esp-bootloader-esp-idf = { version = "0.4.0", features = ["esp32c6"] }
+# replace line below and uncomment "log"
+esp-println = { version = "0.16.0", features = ["esp32c6"] }
+# esp-println = { version = "0.16.0", features = ["esp32c6", "log-04"] }
+# log = "0.4.29"

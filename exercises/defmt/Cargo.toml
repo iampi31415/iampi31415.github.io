@@ -1,0 +1,26 @@
+[package]
+name = "defmt"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+# previous author https://github.com/SergioGasquez
+authors = ["gh:iampi31415"]
+
+[dependencies]
+defmt = "1.0.1"
+esp-hal = { version = "1.0.0-rc.1",features = [
+    "esp32c6",
+    "unstable",
+] }
+# More info on: https://docs.espressif.com/projects/rust/esp-bootloader-esp-idf/0.4.0/esp32/esp_bootloader_esp_idf/index.html
+esp-bootloader-esp-idf  = { version = "0.4.0", features = ["esp32c6"]}
+# Logging
+esp-backtrace = { version = "0.18.0", features = [
+    "esp32c6",
+    "panic-handler",
+    "defmt",
+]}
+esp-println = { version = "0.16.0", features = [
+    "esp32c6",
+    "log-04",
+] }

@@ -22,9 +22,9 @@ GDB basic commands, classified with respect to their purpose.
 - `layout asm`: shows assembly source and CLI.
 - `tui disable`: to disable the layout.
 
-### Overviews:
+### Overviews
+
 - `info break`: to show breakpoints
 - `info locals`: to show variables.
 - `print x`: to print variable `x`. Also `print &x` prints the address of `x`.
 - `list` or `list main`: will show our program with numbered lines.
-

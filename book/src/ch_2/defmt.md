@@ -66,7 +66,7 @@ Go to `exercises/defmt` directory.
    - An alternative to changing `.cargo/config.toml` is using `DEFMT_LOG=<value> cargo run --release`; the same is valid for `ESP_LOG`.
 6. Add a `panic!` macro to trigger a panic with a `defmt` message.
 
-`exercises/defmt/examples/defmt.rs` contains a solution. You can run it with the following command: `cargo run --example defmt --release`. You will need to have the settings above done correctly though!
+`examples/defmt.rs` contains a solution. You can run it with the following command: `cargo run --example defmt --release`. You will need to have the settings above done correctly though!
 
 ## Suggested reading
 

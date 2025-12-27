@@ -50,7 +50,7 @@ Our `cargo run` is replaced by `cargo build && espflash flash <elf_path> --monit
 
    - Try with other levels, for example, with `trace`.
 
-The `exercises/hello_world/examples/hello_world.rs` contains a solution.
+The `examples/hello_world.rs` contains a solution.
 
 You can run it with the following command `cargo run --release --example hello_world`.
 

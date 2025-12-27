@@ -53,7 +53,7 @@ Now it will emit debug information in the ELF binary file; _yet debug info isn't
 
 - Re-run the program with `--release` and confirm `??:??` is now filled in.
 
-`exercises/panic/examples/panic.rs` contains a solution. It can be run with: `cargo run --example panic --release`.
+`examples/panic.rs` contains a solution. It can be run with: `cargo run --example panic --release`.
 
 ## Recap
 

@@ -1,7 +1,7 @@
 
 We will now create the iconic _blinky_.
 
-Let's access the project with `cd exercises/blinky`. We will need to edit the file `main.rs`.
+Let's access the project with `cd exercises/blinky`. We will need to edit the file `src/main.rs`.
 
 On esp32-c6 board there is no regular LED connected, instead there is an addressable LED which works differently and is beyond the scope of this book.
 
@@ -16,12 +16,10 @@ Instead, we will use a regular LED and a resistor, and build a circuit controlle
 
 Wire up the board as shown on the previous image:
 
-1. Start wiring from `GND` pin header (red wire),
-
-2. From there to the resistor (220mΩ or otherwise, without it the LED blows up.)
-3. From the other leg of the resistor to the LED (blue wire),
-
-4. Finally, the LED connects to GPIO7 (the long LED-leg is on GPIO7.)
+1. Start wiring from `GND` pin header (red wire).
+2. From there to the resistor (220mΩ or otherwise, without it the LED blows up).
+3. From the other leg of the resistor to the LED (blue wire).
+4. Finally, the LED connects to GPIO7 (the long LED-leg is on GPIO7).
 
 ## Exercise
 

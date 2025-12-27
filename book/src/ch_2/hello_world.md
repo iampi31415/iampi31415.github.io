@@ -41,9 +41,10 @@ Our `cargo run` is replaced by `cargo build && espflash flash <elf_path> --monit
 
 ## Exercise
 
-`esp-println` supports backends `log` and `defmt` which provide `info!`, `warn!` other macros. Let's try adding them:
+`esp-println` supports backends `log` and `defmt` which provide `info!`, `warn!` and other macros. Let's try adding them:
 
-1. Uncomment the lines in `src/main.rs` and in `Cargo.toml` to enable `log`.
+1. Uncomment the "log lines" in `src/main.rs`,
+2. Uncomment them in `Cargo.toml` as well, to add our `log` dependency.
 2. The `log` crate logging level is controlled with `ESP_LOG` under the `[env]` section in `.cargo/config.toml`.
     - Change the `ESP_LOG` variable to turn `off` all logs. Re-run `cargo run --release`, to test how it works.
 
@@ -51,7 +52,10 @@ Our `cargo run` is replaced by `cargo build && espflash flash <elf_path> --monit
 
 The `exercises/hello_world/examples/hello_world.rs` contains a solution.
 
-You can run it with the following command `cargo run --release --example hello_world`. You should first fix the lines at the bottom of `Cargo.toml`.
+You can run it with the following command `cargo run --release --example hello_world`.
+
+> [!NOTE]
+> Running the solution requires fixing the log-lines at the bottom of `Cargo.toml`.
 
 ## Suggested Reading
 

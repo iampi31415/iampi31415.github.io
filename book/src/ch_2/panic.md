@@ -1,19 +1,23 @@
 
-If something goes very wrong, a program will `panic!`. In embedded, we will always need to add a `panic-handler`.
+If something goes very wrong, a program will `panic!`.
 
-[esp-backtrace] provides a `panic-handler` feature that handles `panic!`. It prints the backtrace of what was executed up to that point. We need to `use esp-backtrace as _` so that this handler is included in the final binary.
+[esp-backtrace] provides a `panic-handler` feature that handles `panic!`.
 
-Let's access the project at `exercises/panic`, and modify the code to test `panic!`.
+"Handling panic!" here means to print what was executed up to that point (the backtrace).
 
-We will also take a look at compilation _profiles_. We don't need deep knowledge about profiles, just the very basics.
+> [!NOTE]
+> We need to `use esp-backtrace as _` so that this handler is included in the final binary.
 
-`cargo` uses profile-settings to control compilation using defaults when unspecified. We are interested in controlling a few aspects:
+In the exercise below, the word _profile_ is used. Profiles are configurations `cargo` uses to control compilation. When unspecified, `cargo` sets sensible defaults for us.
 
-- Should it be as fast as possible? As short as possible?
-- Should it include information useful for debugging?
+Common profile settings we will change are:
+
+- Controlling binary size,
+- Including debug information.
 
 ## Exercise: part 1
 
+0. Let's access the project at `exercises/panic`, and modify the code to test `panic!`.
 1. In `main.rs` use the `esp-backtrace` crate.
 2. Then add a `panic!` somewhere, e.g. after our `println`.
 3. Run the code with `cargo run`; this uses the _development profile_.

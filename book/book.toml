@@ -32,7 +32,7 @@ additional-css = ["./src/assets/custom.css"]
 # mathjax-support = false
 # additional-js = ["custom.js"]
 
-[preprocessor.fetch]
+# [preprocessor.fetch]
 # Not a general preprocessor key but in `fetch`.
 # disable=true
 

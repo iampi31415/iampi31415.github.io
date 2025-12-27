@@ -5,7 +5,7 @@ do
   if [ -d "${CRATE}" ]; then
     cd $CRATE;
     echo ${CRATE};
-    cargo +nightly update --breaking -Z unstable-options;
+    cargo upgrade
     cd ..;
   fi
 done

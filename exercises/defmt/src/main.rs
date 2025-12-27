@@ -5,15 +5,17 @@
 // esp_backtrace, esp_println, defmt
 
 use esp_hal::{
+    Config,
+    main,
     delay::Delay,
     time::{Duration, Instant},
 };
 
 esp_bootloader_esp_idf::esp_app_desc!();
 
-#[esp_hal::main]
+#[main]
 fn main() -> ! {
-    esp_hal::init(esp_hal::Config::default());
+    esp_hal::init(Config::default());
     let delay = Delay::new();
 
     // Print a log or a message using defmt

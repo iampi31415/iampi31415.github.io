@@ -24,8 +24,8 @@
 <!-- - [Detect a button press](./button.md) --> <!-- - [Detect a button press with interrupt](./interrupt.md) -->
 <!-- - [DMA](./dma_spi.md) -->
 <!-- - [HTTP Client](./http_client.md) -->
-<!-- - [Using `defmt`](./defmt.md) -->
 # Debugging
 
 - [Set Up](./ch_3/set_up.md)
 - [GDB](./ch_3/gdb.md)
+- [GDB Commands](./ch_3/commands.md)

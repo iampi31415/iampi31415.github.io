@@ -4,14 +4,15 @@ Programs are debugged using:
 - `assert!` expected values
 - Write unit tests
 
-To access these finer details, we can use a _debugger_.
+To access finer execution details, we can use a _debugger_.
 
 ## Software needed
 
 Two programs will be needed:
 
 - GNU Debugger (`gdb`): inspect and stop the program as it runs.
-    - Linux has `gdb` installed. On MacOS, install it with `brew install gdb`.
+    - Linux has `gdb` installed but _not_ for `riscv:rv32`, so we need `sudo apt-get install gdb-multiarch`. Then always use `gdb-multiarch`.
+    - On MacOS, install it with `brew install gdb`.
 - OpenOCD (`openocd`): handles the communication with the board.
 
 ### OpenOCD
@@ -23,7 +24,7 @@ Download the latest `openocd` for your laptop architecture from the `openocd-esp
 
 - For Linux amd-64:
     ```bash
-    # Linux amd64. See releases page for other archs. 
+    # Linux amd64. See releases page for other archs.
     cd ${HOME} # go to home so we download in a visible place.
     OPENOCD_ZIP_NAME=openocd-esp32-linux-amd64-0.12.0-esp32-20250707.tar.gz
     DATE=v0.12.0-esp32-20250707

@@ -7,12 +7,10 @@ There is a lot to learn, so let's start simple.
     cd exercises/hello_world
     ```
 
-2. Build, flash, and monitor the project with `cargo run`. You should see:
+2. Build, flash, and monitor the project with `cargo run`.
+    For now, ignore the warning about `--release`. You should see:
 
     ```txt
-    ..
-    0x4080082e - handle_interrupts
-    at ??:??
     ..
     Commands:
         CTRL+R    Reset chip
@@ -22,7 +20,7 @@ There is a lot to learn, so let's start simple.
     ..
     ```
 
-    We will talk about the `at ??:??` in the next chapter about `panic!`.
+    Press `CTRL+C` to exit.
 
     The `loop..!` logs come from [esp-println]. They provide us with `dbg!`, `print!` and `println!`.
 

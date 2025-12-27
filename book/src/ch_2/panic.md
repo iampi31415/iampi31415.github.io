@@ -1,7 +1,7 @@
 
-If something goes wrong, the program will `panic!`. In embedded, we will always need to add a `panic-handler`.
+If something goes very wrong, a program will `panic!`. In embedded, we will always need to add a `panic-handler`.
 
-[esp-backtrace] provides a `panic-handler` feature that handles `panic!`. This is why we need to `use esp-backtrace as _`.
+[esp-backtrace] provides a `panic-handler` feature that handles `panic!`. It prints the backtrace of what was executed up to that point. We need to `use esp-backtrace as _` so that this handler is included in the final binary.
 
 Let's access the project at `exercises/panic`, and modify the code to test `panic!`.
 

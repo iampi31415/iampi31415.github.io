@@ -4,16 +4,15 @@ Let's install all we need.
 
 1. Install the Rust toolchain following the steps in <https://rustup.rs/>
     - The Rust Toolchain is `rustup` plus many components `cargo`, `rustc`, the *compiled* `std` component and so on.
-2. Add the compiled `std`-component for our target microcontroller
+2. Add the compiled `std`-component for our _target_ processor
 
-    ```bash    
+    ```bash
     rustup target add riscv32imac-unknown-none-elf
     ```
-
 3. Add development components:
 
     ```bash
-    rustup component add rust-analyzer rust-src 
+    rustup component add rust-analyzer rust-src
     ```
 
     `rust-src` is the `std`-component's source code, used by `rust-analyzer`.
@@ -25,6 +24,7 @@ Let's install all we need.
 Install `espflash` with: `cargo install espflash`
 
 ## Build dependencies
+`rustc` has compilation backends which do part of the compilation of our code. `llvm` is one such possible backend (the most common one.)
 
 - Debian/Ubuntu.
 
@@ -40,9 +40,8 @@ Install `espflash` with: `cargo install espflash`
 
 ## Additional Software
 
-- Editor: Neovim, Zed, VSCode, Helix.
-- [`Rust Analyzer`](https://rust-analyzer.github.io/) LSP, for code completion, formatting.
-- `Even Better TOML` LSP, for editing TOML based configuration files
+- Editor: Neovim (I use Neovim + NvChad), Zed, VSCode, Helix.
+- [`Rust Analyzer`](https://rust-analyzer.github.io/) LSP.
 
 <!--
 

@@ -1,16 +1,16 @@
-
 This is an embedded-rust tutorial using the esp32-c6 board.
 
 Rust knowledge is assumed, but no embedded experience is required. The content was written for Unix (Linux, MacOS).
 
-The book aims to be self-contained, but short [reading material](#suggested-reading) will be suggested. If the license allows for, we will copy useful content here, and provide the source.
+The book aims to be self-contained, but short [reading material](#suggested-reading) will be suggested. If the license allows for, the useful content will be copied, and its source provided.
 
 ## Required Hardware
 
  The esp32-c6 board is available on Mouser, Aliexpress and other retailers. It should look similar to:
 
 <div class="center w220">
-    <a href="/assets/board.jpg"> <img  alt="Close up image of our board." src="/assets/board.jpg"/>
+    <a href="/assets/board.jpg">
+    <img  alt="Close up image of our board." src="/assets/board.jpg"/>
     </a>
 </div>
 
@@ -37,7 +37,7 @@ To get started, clone repo and then change directory:
 
 ## Suggested reading
 
-- esp32-c6 [user guide]: you can find the labelled components, list of peripherals, and schematics.
+- esp32-c6 [user guide]: The labelled components, list of peripherals, and schematics.
 
 ## Related resources
 

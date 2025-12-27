@@ -13,13 +13,14 @@ version = "1.0.0"
 features = ["esp32c6", "unstable"]
 
 [dependencies]
-esp-backtrace = { version = "0.18.0", features = [
+esp-backtrace = { version = "0.18.1", features = [
   "esp32c6",
   "panic-handler",
   "println",
 ] }
 esp-bootloader-esp-idf = { version = "0.4.0", features = ["esp32c6"] }
-# replace line below and uncomment "log"
-esp-println = { version = "0.16.0", features = ["esp32c6"] }
+# add the log-04 feature as shown in the next line
+esp-println = { version = "0.16.1", features = ["esp32c6"] }
 # esp-println = { version = "0.16.0", features = ["esp32c6", "log-04"] }
+# Uncomment this dependency to use `log`.
 # log = "0.4.29"

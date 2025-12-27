@@ -6,7 +6,7 @@
 - [Definitions](./ch_1/definitions.md)
 - [Hardware](./ch_1/hardware.md)
 - [Software](./ch_1/software.md)
-- [Remote 1](./ch_1/remote.md)
+<!-- - [Remote 1](./ch_1/remote.md) -->
 
 ------
 

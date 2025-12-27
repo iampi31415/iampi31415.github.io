@@ -3,8 +3,8 @@ Let's install all we need.
 ## Rust Tools
 
 1. Install the Rust toolchain following the steps in <https://rustup.rs/>
-    - The Rust Toolchain is `rustup` plus many components `cargo`, `rustc`, the *compiled* `std` component and so on.
-2. Add the compiled `std`-component for our _target_ processor
+   - The Rust Toolchain is `rustup` plus many components `cargo`, `rustc`, the *compiled* `std` component and so on.
+2. Add the compiled `std`-component for our *target* processor
 
     ```bash
     rustup target add riscv32imac-unknown-none-elf
@@ -24,6 +24,7 @@ Let's install all we need.
 Install `espflash` with: `cargo install espflash`
 
 ## Build dependencies
+
 `rustc` has compilation backends which do part of the compilation of our code. `llvm` is one such possible backend (the most common one.)
 
 - Debian/Ubuntu.

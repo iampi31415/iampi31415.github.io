@@ -17,15 +17,15 @@ Common profile settings we will change are:
 
 ## Exercise: part 1
 
-0. Let's access the project at `exercises/panic`, and modify the code to test `panic!`.
-1. In `main.rs` use the `esp-backtrace` crate.
-2. Then add a `panic!` somewhere, e.g. after our `println`.
+0. Let's access the project at `exercises/panic`.
+1. In `src/main.rs` import (or _use_) the `esp-backtrace` crate.
+2. Add a `panic!` somewhere, e.g. after our `println`.
 3. Run the code with `cargo run`; this uses the _development profile_.
 
-    - It outputs debug information into the compiled binary.
+   - It outputs debug information into the compiled binary.
 4. Then run with _release profile_ `cargo run --release`.
 
-    - This profile will not output all debug information in the binary. We should find:
+   - This profile will not output all debug information in the binary. We should find:
 
         ```console
         Hello world!
@@ -57,9 +57,9 @@ Now it will emit debug information in the ELF binary file; _yet debug info isn't
 
 ## Recap
 
-- `esp-backtrace` handles panics (by us or by any library).
-- We can manually use `panic!` to exit the program.
-- Configure compilation so that panics print a backtrace with all debug information.
+- Using `esp-backtrace` to handle panic and printing backtraces.
+- Using `panic!` to exit the program.
+- Configuring compilation so that panics print a backtrace with all debug information.
 
 ### Suggested Reading
 

@@ -45,10 +45,10 @@ Our `cargo run` is replaced by `cargo build && espflash flash <elf_path> --monit
 
 1. Uncomment the "log lines" in `src/main.rs`,
 2. Uncomment them in `Cargo.toml` as well, to add our `log` dependency.
-2. The `log` crate logging level is controlled with `ESP_LOG` under the `[env]` section in `.cargo/config.toml`.
-    - Change the `ESP_LOG` variable to turn `off` all logs. Re-run `cargo run --release`, to test how it works.
+3. The `log` crate logging level is controlled with `ESP_LOG` under the `[env]` section in `.cargo/config.toml`.
+   - Change the `ESP_LOG` variable to turn `off` all logs. Re-run `cargo run --release`, to test how it works.
 
-    - Try with other levels, for example, with `trace`.
+   - Try with other levels, for example, with `trace`.
 
 The `exercises/hello_world/examples/hello_world.rs` contains a solution.
 

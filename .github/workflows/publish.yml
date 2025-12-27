@@ -11,7 +11,7 @@ jobs:
     name: Build, Test and Deploy
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # To push a branch 
+      contents: write  # To push a branch
       pull-requests: write  # To create a PR from that branch
     steps:
       - uses: actions/checkout@v6
@@ -41,7 +41,7 @@ jobs:
       # Build the book, located in `./book`
       - run: mdbook build book
       # Publish the stuff under `/book/book` to GH pages
-      # If we add a preprocessor, we will need to update to 
+      # If we add a preprocessor, we will need to update to
       # `/book/book/html`
       - uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:

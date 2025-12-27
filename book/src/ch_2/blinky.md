@@ -26,7 +26,7 @@ Wire up the board as shown on the previous image:
 ## Exercise
 
 1. Create `OutputConfig` with default configuration.
-    - Hint: it implements `Default`.
+   - Hint: it implements `Default`.
 2. Toggle the `led` with 3500ms delay.
 
 The `exercises/blinky/examples/blinky.rs` contains a solution.
